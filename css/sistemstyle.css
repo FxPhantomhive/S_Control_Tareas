@@ -1,0 +1,235 @@
+/* Menu de sistema principal*/
+
+body{
+  margin: 0px;
+  font-family: 'Work Sans', sans-serif;
+  width: 100%;
+  height: 100%;  
+}
+.hideadmin{
+  display: none;
+}
+.center{
+  text-align: center;
+}
+.contenedor{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+.opciones{
+  width: 20%;
+  height: auto;
+  background: linear-gradient(to bottom, rgba(59,174,206,1) 0%, rgba(72,156,177,1) 0%, rgba(68,150,171,1) 6%, rgba(7,59,70,1) 100%);  
+}
+.principal{
+  width: 80%;
+  height: 100vh;   
+}
+.contimg{
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  justify-content: center;
+}
+.imgperfil{
+  width: 25%;
+  height: 30%;
+  padding: 5%;
+  border-radius: 50%;
+}
+.titlehead{
+  justify-content: center;
+  display: flex;
+  flex-flow: column;
+  align-self: normal;
+  align-items: baseline;
+}
+.usuario{
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0%;
+}
+.modusuario{
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  margin: 0%;
+}
+.icon-color{
+  color: white;
+    font-size: 1.2em !important;
+    padding: 8px;
+}
+.icon-color-moduser{
+  color: white;
+    font-size: 0.8em !important;
+    padding: 2px;
+}
+.icon-color-cerrarsecion{
+  color: white;
+    font-size: 1.2em !important;
+    padding: 8px;
+}
+.icon-color-modificar{
+  color: #0fda33;
+  font-size: 1em !important;
+  padding: 0px;
+  font-weight: bold !important;    
+}
+.icon-color-eliminar{
+  color: #ff3e1f;
+  font-size: 1em !important;
+  padding: 0px;
+  font-weight: bold !important;    
+}
+
+.items{
+  padding: 1%;   
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.itemsmenu{
+  text-align: left;
+  margin-top: 10%;  
+}
+.aitem{  
+  color: white;
+  text-decoration: none;  
+  font-size: 1em;
+}
+.modperfil{
+  text-align: center;
+  color: white;
+  text-decoration: none;  
+  font-size: 1em;
+}
+.cerrars{
+  margin-top: 10%;
+  margin-bottom: 0%;
+}
+.sesiontext{
+  color: white;
+  text-align: center;    
+}
+/*Contenidos*/
+.principal{
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  height: 100%;
+}
+.titular{
+  text-align: center;
+  font-size: 2.5em;
+}
+.mensajesconfirmacion{
+  text-align: center;
+  font-size: 1.5em;
+}
+.regresar{
+  text-decoration: none;
+  text-align: center;
+}
+.contprin{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100vh;
+  padding-left: 2%;
+  padding-right: 2%;  
+}
+.targeta{    
+  padding: 20px;
+  border-radius: 10px;
+  width: 95%;
+  box-shadow: 10px 9px 24px 0px rgba(0,0,0,0.32);
+}
+/* estilos tablas*/
+table{
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+}
+thead{
+  background-color: #00506B;
+  color: white;
+}
+td,th{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+/*
+tr:nth-child(even){
+  background-color: azure;
+}
+tr:hover td{
+  background-color: rgba(0, 80, 107, 0.808);
+  color: white;
+} */
+/* estilos formularios*/
+.targetaform{   
+  align-self: center; 
+  align-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 10px 9px 24px 0px rgba(0,0,0,0.32);
+}
+.formitem{
+text-align: center;
+padding-bottom: 15px;
+}
+input[type=text],input[type=date],input[type=password]{
+  border-radius: 15px;
+  height: 25px;
+  width: 90%;
+  padding-left: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border: solid 0.8px;
+  border-color: rgb(169, 169, 169); 
+}
+.selectuser{
+  border-radius: 15px;  
+  height: 25px;
+  width: 90%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+textarea{
+  border-radius: 15px;  
+  width: 90%;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+input[type=submit]{
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #00506B;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+input[type=reset]{
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #00506B;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Graph Studio - Inicio de sesion</title>
+</head>
+<body>
+         <!--Navbar    --> 
+            <header>
+                    <nav class="navbar navbar-expand-lg navbar-light  static-top">
+                        <div class="container">
+                          <a class="navbar-brand" href="#">Graph Studio</a>
+                          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                              </button>
+                          <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ml-auto">
+                              <li class="nav-item active">
+                                <a class="nav-link" href="index.hmtl">Inicio
+                                      <span class="sr-only">(current)</span>
+                                    </a>
+                              </li>
+                              <li class="nav-item">
+                              <!--<a class='nav-link' href='login.php'>Log in</a>     --> 
+                              <a class='nav-link' href='sobre-nosotros.html'><stronge>Sobre nosotros</stronge></a> 
+                              </li>
+                              <li class="nav-item">
+                                <a class='nav-link' href='servicios.html'><stronge>Servicios</stronge></a>         
+                                </li>
+                                <li class="nav-item">
+                                    <a class='nav-link' href='contacto.html'>Contactos</a>         
+                                </li>
+                                <li class="nav-item">
+                                    <a class='nav-link' href='sistema-proyecto.html'>Sistema de control de proyectos</a>         
+                                </li>
+                              <li class="nav-item">
+                              <a class='nav-link' href='login.html'><stronge>Iniciar Sesion</stronge></a>         
+                              </li>        
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>            
+                </header>
+        <div class="container-fluid">
+                <div class="row no-gutter">
+                  <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+                  <div class="col-md-8 col-lg-6">
+                    <div class="login d-flex align-items-center py-5">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-9 col-lg-8 mx-auto">
+                            <h3 class="login-heading mb-4 text-center">Bienvenido</h3>
+                            <form action="actionlogin.php" method="post">
+                              <div class="form-label-group">
+                                  <input type="text" name="usuario" id="usuario" size="35" class="form-control"required>
+                                  <label for="inputPassword">Usuario</label>
+                              </div>
+              
+                              <div class="form-label-group">
+                                  <input type="password" name="clave" id="clave" size="35" class="form-control"required>
+                                <label for="inputPassword">Contraseña</label>
+                              </div> 
+                              <button class="btn-login btn btn-lg btn-primary btn-block text-uppercase font-weight-bold mb-2" type="submit">Iniciar Sesión</button>
+                              <div class="text-center">
+                                <a class="small" href="#">¿Olvidaste tu contraseña?</a></div>                              
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+     <!-- Footer -->
+  <footer class="footer bg-light static-bottom">
+        <div class="container">
+          <div class="row">
+            <div class=" h-100 text-center text-lg-left my-auto">
+              <ul class="list-inline mb-2">
+                <li class="list-inline-item">
+                  <a href="index.html">Inicio</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="sobre-nosotros.hmtl">Sobre nosotros</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="servicios.html">Servicios</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="contacto.html">Contactos</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="sistema-proyecto">Sistema de control de proyectos</a>
+                </li>
+                <li class="list-inline-item">&sdot;</li>
+                <li class="list-inline-item">
+                  <a href="login.html">Iniciar Sesion</a>
+                </li>
+              </ul>
+              <p class="text-muted small mb-4 mb-lg-0">&copy; Desarrollo de la plataforma web Ciclo 01-2019. All Rights Reserved.</p>
+            </div>
+            <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mr-3">
+                  <a href="#">
+                    <i class="fab fa-facebook fa-2x fa-fw"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item mr-3">
+                  <a href="#">
+                    <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fab fa-instagram fa-2x fa-fw"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
