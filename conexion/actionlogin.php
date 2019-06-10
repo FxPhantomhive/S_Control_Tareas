@@ -25,7 +25,7 @@ $_SESSION['foto']=$row['foto'];
         $mensaje = "Bienvenido: ".$row['usuario']."";
 echo "<script>";
 echo "alert('$mensaje');";  
-echo "window.location = 'proyectos.php';";
+echo "window.location = '../proyectos/proyectos.php';";
 echo "</script>"; 
 
     }else
@@ -33,7 +33,7 @@ echo "</script>";
         $mensaje = "verifique su contraseña o contacte con un administrador";
 echo "<script>";
 echo "alert('$mensaje');";  
-echo "window.location = 'login.html';";
+echo "window.location = '../login.html';";
 echo "</script>";;
     }
 }
@@ -41,6 +41,6 @@ else
     $mensaje = "algun campo esta vacio";
 echo "<script>";
 echo "alert('$mensaje');";  
-echo "window.location = 'login.php';";
+echo "window.location = '../login.php';";
 echo "</script>";
 ?>

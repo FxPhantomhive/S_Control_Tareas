@@ -1,5 +1,5 @@
 <?php
-    include_once "conexion.php";
+    include_once "../conexion/conexion.php";
     $id = $_GET['id'];
 
     $consu="delete from usuarios where id_usuario='$id'";
@@ -11,14 +11,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/sistemstyle.css">
+    <link rel="stylesheet" href="../css/sistemstyle.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <title>eluminar usuario</title>
+    <link href="../css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <title>eliminar usuario</title>
 </head>
 <body>
     <section class="contenedor">
-       <?php include_once "componentes/asidemenu.php"; ?>
+       <?php include_once "../componentes/asidemenu.php"; ?>
         <section class="principal">
         
             <div class="contprin">
@@ -35,7 +35,7 @@
                     mysqli_close($conexion);
                 ?>
                 <div class="center">
-                    <a  class="regresar" href="proyectos.php">Regresar al menu</a>
+                    <a  class="regresar" href="../usuarios/verusuarios.php">Volver</a>
                 </div>
                 
             </div>

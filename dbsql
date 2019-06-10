@@ -12,6 +12,37 @@ CREATE TABLE usuarios(
     fecha_actualiza datetime
 )ENGINE=INNODB;
 
+
 insert into usuarios (nombre,apellido,usuario,pass,tipo_usuario,usuario_registra,fecha_registra) values ('Felix','Melendez','FxPhantomhive','1234','administrador','bdsql','2019-05-30 17:15:20');
 insert into usuarios (nombre,apellido,usuario,pass,tipo_usuario,usuario_registra,fecha_registra) values ('Fernando','Gonzalez','Ferjocode','1234','normal','bdsql','2019-05-30 17:15:20');
 insert into usuarios (nombre,apellido,usuario,pass,tipo_usuario,usuario_registra,fecha_registra) values ('Yasmin','Alas','gato','1234','normal','bdsql','2019-05-30 17:15:20');
+
+CREATE TABLE categorias (
+    id_categoria int PRIMARY KEY,
+    Nombre_categoria varchar(200),
+    descripicion varchar(200),
+    usuario_registra varchar(20),
+    fecha_registra datetime,
+    usuario_actualiza varchar(20),
+    fecha_actualiza datetime
+)ENGINE=INNODB;
+
+CREATE TABLE departamento (
+    id_departamento int PRIMARY KEY,
+    Nombre_departamento varchar(200),
+    descripicion varchar(200),
+    usuario_registra varchar(20),
+    fecha_registra datetime,
+    usuario_actualiza varchar(20),
+    fecha_actualiza datetime
+)ENGINE=INNODB;
+
+CREATE TABLE cargo (
+    id_cargo int PRIMARY KEY,
+    Nombre_cargo varchar(200),
+    descripicion varchar(200),
+    usuario_registra varchar(20),
+    fecha_registra datetime,
+    usuario_actualiza varchar(20),
+    fecha_actualiza datetime
+)ENGINE=INNODB;

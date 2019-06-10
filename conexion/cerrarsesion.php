@@ -10,5 +10,5 @@ if(isset($_COOKIE[session_name()])) {
 $mensaje = "Se a cerrado sesion correctamente";
 	echo "<script>";
 echo "alert('$mensaje');";  
-echo "self.location = 'login.html';";
+echo "self.location = '../login.html';";
 echo "</script>"; 

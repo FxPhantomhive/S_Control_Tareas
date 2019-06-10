@@ -1,5 +1,5 @@
 <?php
-    include_once 'conexion.php';
+    include_once '../conexion/conexion.php';
  $consulta="select * from usuarios;";
  $datos=mysqli_query($conexion,$consulta);
     
@@ -10,9 +10,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/sistemstyle.css">
+    <link rel="stylesheet" href="../css/sistemstyle.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="../css/simple-line-icons.css" rel="stylesheet" type="text/css">
     <title>Proyectos</title>
     <script language="JavaScript">
         function aviso(url){
@@ -28,7 +28,7 @@
 </head>
 <body>
     <section class="contenedor">
-       <?php include_once "componentes/asidemenu.php"; ?>
+       <?php include_once "../componentes/asidemenu.php"; ?>
         <section class="principal">
         
             <div class="contprin">

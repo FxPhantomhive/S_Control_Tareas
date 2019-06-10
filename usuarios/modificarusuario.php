@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/sistemstyle.css">
+    <link rel="stylesheet" href="../css/sistemstyle.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="../css/simple-line-icons.css" rel="stylesheet" type="text/css">
     <title>modificar usuario</title>
 </head>
 <body>
     <section class="contenedor">
-       <?php include_once "componentes/asidemenu.php"; ?>
+       <?php include_once "../componentes/asidemenu.php"; ?>
         <section class="principal">
         
             <div class="contprin">
@@ -54,7 +54,7 @@
                     </tr>
                     <tr>
                         <td><label>Foto:</label></td>
-                        <td><img src="img/<?php echo $row['foto']; ?>" style="width: 250px; height: auto;">
+                        <td><img src="../img/<?php echo $row['foto']; ?>" style="width: 250px; height: auto;">
                             <input type="hidden" name="file2" value="<?php echo $row['foto']; ?>">
                             <input type="file" name="image">
                         </td>
