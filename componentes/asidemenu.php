@@ -33,28 +33,30 @@ $tipo=$_SESSION['tipo_user'];
         <div class="items"><i class="icon-plus icon-color"></i><a href="../categorias/registrarcategoria.php" class="aitem">Nueva Categoria</a></div>
         <div class="items"><i class="icon-tag icon-color"></i><a href="../categorias/vercategorias.php" class="aitem">Ver Categorias</a></div>
 
-        <div class="items"><i class="icon-direction icon-color"></i><a href="../departamentos/registrardepartamento.php" class="aitem ">Nuevo departamento</a></div>
-        <div class="items"><i class="icon-plus icon-color"></i><a href="../departamentos/verdepartamentos.php" class="aitem ">Ver departamentos</a></div>
-        <div class="items"><i class="icon-badge icon-color"></i><a href="../cargos/registrarcargo.php" class="aitem ">Nuevo cargo</a></div>
-        <div class="items"><i class="icon-plus icon-color"></i><a href="../cargos/vercargos.php" class="aitem ">Ver cargos</a></div>
+        <div class="items"><i class="icon-plus  icon-color"></i><a href="../departamentos/registrardepartamento.php" class="aitem ">Nuevo departamento</a></div>
+        <div class="items"><i class="icon-direction icon-color"></i><a href="../departamentos/verdepartamentos.php" class="aitem ">Ver departamentos</a></div>
+        <div class="items"><i class="icon-plus icon-color"></i><a href="../cargos/registrarcargo.php" class="aitem ">Nuevo cargo</a></div>
+        <div class="items"><i class="icon-badge icon-color"></i><a href="../cargos/vercargos.php" class="aitem ">Ver cargos</a></div>
 
-        <div class="items"><i class="icon-pin icon-color"></i><a href="#" class="aitem">Registrar Tareas</a></div>
-        <div class="items"><i class="icon-list icon-color"></i><a href="#" class="aitem">Ver Tareas</a></div>
-        <div class="items"><i class="icon-clock icon-color"></i><a href="#" class="aitem">Tareas pendientes</a></div>
-        <div class="items"><i class="icon-check icon-color"></i><a href="#" class="aitem">Tareas completadas</a></div>
+        <div class="items"><i class="icon-pin icon-color"></i><a href="../tareas/registrartarea.php" class="aitem">Registrar Tareas</a></div>
+        <div class="items"><i class="icon-list icon-color"></i><a href="../tareas/vertareas.php" class="aitem">Ver Tareas</a></div>
+        <div class="items"><i class="icon-hourglass icon-color"></i><a href="../tareas/tareassini.php" class="aitem">Tareas Sin iniciar</a></div>
+        <div class="items"><i class="icon-clock icon-color"></i><a href="../tareas/tareaspend.php" class="aitem">Tareas pendientes</a></div>
+        <div class="items"><i class="icon-check icon-color"></i><a href="../tareas/tareascomp.php" class="aitem">Tareas completadas</a></div>
         <div class="items"><i class="icon-user-follow icon-color"></i><a href="../usuarios/registrarusuario.php" class="aitem ">Registrar Usuarios</a></div>
-        <div class="items"><i class="icon-user icon-color"></i><a href="verusuarios.php" class="aitem ">Ver usuarios</a></div>
+        <div class="items"><i class="icon-user icon-color"></i><a href="../usuarios/verusuarios.php" class="aitem ">Ver usuarios</a></div>
         <div class="items"><i class="icon-globe icon-color"></i><a href="#" class="aitem ">Definir nuevos administradores</a></div>
         <div class="items"><i class="icon-eye icon-color"></i><a href="#" class="aitem ">Gestion de administradores</a></div>
         <?php
         }else if($tipo== "normal"){
         ?>
-        <div class="items "><a href="#" class="aitem ">Inicio </a></div>
+        <div class="items "><i class="icon-home icon-color"></i><a href="#" class="aitem ">Inicio </a></div>
         
-        <div class="items"><i class="icon-home icon-color"></i><a href="#" class="aitem">Registrar Tareas</a></div>
-        <div class="items"><i class="icon-home icon-color"></i><a href="#" class="aitem">Ver Tareas</a></div>
-        <div class="items"><i class="icon-home icon-color"></i><a href="#" class="aitem">Tareas pendientes</a></div>
-        <div class="items"><i class="icon-home icon-color"></i><a href="#" class="aitem">Tareas completadas</a></div>
+        <div class="items"><i class="icon-pin icon-color"></i><a href="../tareas/registrartarea.php" class="aitem">Registrar Tareas</a></div>
+        <div class="items"><i class="icon-list icon-color"></i><a href="../tareas/vertareas.php" class="aitem">Ver Tareas</a></div>
+        <div class="items"><i class="icon-hourglass icon-color"></i><a href="../tareas/tareassini.php" class="aitem">Tareas Sin iniciar</a></div>
+        <div class="items"><i class="icon-clock icon-color"></i><a href="../tareas/tareaspend.php" class="aitem">Tareas pendientes</a></div>
+        <div class="items"><i class="icon-check icon-color"></i><a href="../tareas/tareascomp.php" class="aitem">Tareas completadas</a></div>
         
         <?php 
         }

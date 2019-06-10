@@ -6,6 +6,7 @@
     $usuario = $_POST['usuario'];
     $clave = $_POST['clave'];
     $tipo = $_POST['tipo'];
+    $cargo = $_POST['cargo'];
     $usuarioactualiza=$_POST['uactualiza'];
     $fechaa=date("Y-m-d H:i:s"); 
 
@@ -29,7 +30,7 @@
      echo $clave;
      echo $tipo;
      echo $nombre_temporal; */
-    $consu="update usuarios set nombre='$nombre',apellido='$apellido',usuario='$usuario',pass='$clave',foto='$nombre_temporal',tipo_usuario='$tipo',usuario_actualiza='$usuarioactualiza',fecha_actualiza='$fechaa' where id_usuario='$id';";
+    $consu="update usuarios set nombre='$nombre',apellido='$apellido',usuario='$usuario',pass='$clave',id_cargo='$cargo',foto='$nombre_temporal',tipo_usuario='$tipo',usuario_actualiza='$usuarioactualiza',fecha_actualiza='$fechaa' where id_usuario='$id';";
     $ejecutar=mysqli_query($conexion,$consu);
 ?>
 <!DOCTYPE html>

@@ -2,24 +2,22 @@
     require_once('../conexion/conexion.php');
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
-    $fechain = $_POST['inicio'];
-    $fechaen = $_POST['fin'];
-    $encargado = $_POST['encargado'];
-    $depto = $_POST['departamento'];
-    $cat = $_POST['categoria'];
+    $proyecto = $_POST['proyecto'];
+    $estado = $_POST['estado'];
+    $usua = $_POST['encargado'];
     $usuarioregistra=$_POST['uregistra'];
     $fechar=date("Y-m-d H:i:s"); 
 
-    $consu2="SELECT * from proyectos where Nombre_proyecto='".$nombre."';";
+    $consu2="SELECT * from tareas where Nombre_tarea='".$nombre."';";
     $ejec = mysqli_query($conexion,$consu2) or die("Ocurrio un error al hacer la consulta");
     $row=mysqli_fetch_array($ejec);
     if($row){
         $mensaje = "Ya existe un registro con este nombre de proyecto";        
     } else {
-        if ($nombre != null and $descripcion != null and $usuarioregistra != null ){
+        if ($nombre != null and $descripcion != null and $proyecto != null and $estado != null and $usua != null and $usuarioregistra != null ){
             $mensaje = "los datos fueron insertados de manera satisfactoria";
-        $consu="insert into proyectos(Nombre_proyecto,descripcion,fecha_inicio,fecha_fin,id_usuario,id_departamento,id_categoria,usuario_registra,fecha_registra)
-                        VALUES ('$nombre','$descripcion','$fechain','$fechaen','$encargado','$depto','$cat','$usuarioregistra','$fechar');";
+        $consu="insert into tareas(Nombre_tarea,descripcion,id_proyecto,id_usuario,estado,usuario_registra,fecha_registra)
+                        VALUES ('$nombre','$descripcion','$proyecto','$usua','$estado','$usuarioregistra','$fechar');";
         $ejecutar=mysqli_query($conexion,$consu);
         }else{
             $mensaje = "Existen datos nulos";
@@ -37,7 +35,7 @@
     <link rel="stylesheet" href="../css/sistemstyle.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="../css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <title>Registrar proyecto</title>
+    <title>Registrar tarea</title>
 </head>
 <body>
     <section class="contenedor">
@@ -46,7 +44,7 @@
         
             <div class="contprin">
             <div class="targetaform">
-                <h1 class="titular">Registrar proyecto</h1>
+                <h1 class="titular">Registrar tarea</h1>
                 <?php
                     if(mysqli_connect_errno()){
                         echo "surgio un problema al insertar datos en la base de datos <br>";
@@ -59,7 +57,7 @@
                     mysqli_close($conexion);
                 ?>
                 <div class="center">
-                    <a  class="regresar" href="../proyectos/verproyectos.php">Regresar al menu</a>
+                    <a  class="regresar" href="../tareas/vertareas.php">Regresar al menu</a>
                 </div>
                 
             </div>

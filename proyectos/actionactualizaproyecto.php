@@ -1,5 +1,6 @@
 <?php
     require_once('../conexion/conexion.php');
+    $id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
     $fechain = $_POST['inicio'];
@@ -7,25 +8,20 @@
     $encargado = $_POST['encargado'];
     $depto = $_POST['departamento'];
     $cat = $_POST['categoria'];
-    $usuarioregistra=$_POST['uregistra'];
-    $fechar=date("Y-m-d H:i:s"); 
+    $usuarioactualiza=$_POST['uactualiza'];
+    $fechaa=date("Y-m-d H:i:s"); 
 
-    $consu2="SELECT * from proyectos where Nombre_proyecto='".$nombre."';";
-    $ejec = mysqli_query($conexion,$consu2) or die("Ocurrio un error al hacer la consulta");
-    $row=mysqli_fetch_array($ejec);
-    if($row){
-        $mensaje = "Ya existe un registro con este nombre de proyecto";        
-    } else {
-        if ($nombre != null and $descripcion != null and $usuarioregistra != null ){
-            $mensaje = "los datos fueron insertados de manera satisfactoria";
-        $consu="insert into proyectos(Nombre_proyecto,descripcion,fecha_inicio,fecha_fin,id_usuario,id_departamento,id_categoria,usuario_registra,fecha_registra)
-                        VALUES ('$nombre','$descripcion','$fechain','$fechaen','$encargado','$depto','$cat','$usuarioregistra','$fechar');";
+    
+    if ($id != null and $nombre != null and $descripcion != null and $fechain != null and $fechaen != null and $encargado != null and $depto != null and $cat != null and $usuarioactualiza != null ){
+        $mensaje = "los datos fueron actualizados de manera satisfactoria";
+
+        $consu="update proyectos set Nombre_proyecto='$nombre',descripcion='$descripcion',fecha_inicio='$fechain',fecha_fin='$fechaen',id_usuario='$encargado',id_departamento='$depto',id_categoria='$cat',usuario_actualiza='$usuarioactualiza',fecha_actualiza='$fechaa' where id_proyecto='$id';";
         $ejecutar=mysqli_query($conexion,$consu);
-        }else{
-            $mensaje = "Existen datos nulos";
-        }      
+    }else{
+        $mensaje = "Existen datos nulos";
+    }      
         
-    }   
+      
     
 ?>
 <!DOCTYPE html>
@@ -37,7 +33,7 @@
     <link rel="stylesheet" href="../css/sistemstyle.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="../css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <title>Registrar proyecto</title>
+    <title>Actualizar proyecto</title>
 </head>
 <body>
     <section class="contenedor">
@@ -46,9 +42,9 @@
         
             <div class="contprin">
             <div class="targetaform">
-                <h1 class="titular">Registrar proyecto</h1>
+                <h1 class="titular">Actualizar proyecto</h1>
                 <?php
-                    if(mysqli_connect_errno()){
+                    if(mysqli_connect_errno($ejecutar)){
                         echo "surgio un problema al insertar datos en la base de datos <br>";
                         echo "error: ".mysqli_connect_errno()."<br>";
                     }else{

@@ -1,3 +1,8 @@
+<?php
+require_once('../conexion/conexion.php');
+    $cargo="SELECT * from cargo;";
+    $Ecargo=mysqli_query($conexion,$cargo);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,6 +41,18 @@
                     <tr>
                         <td><label>Contraseña:</label></td>
                         <td><input type="password" name="clave" id="clave" size="35" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Cargo:</label></td>
+                        <td><select name="cargo" id="cargo" class="selectuser" required>
+                            <?php  
+                                                               
+                                while($row1=mysqli_fetch_array($Ecargo)){ ?>
+                                    <option value="<?php echo $row1['id_cargo']; ?>"><?php echo $row1['Nombre_cargo']; ?></option>
+                            <?php    
+                            }
+                            ?>                            
+                        </select></td>
                     </tr>
                     <tr>
                         <td><label>Foto:</label></td>

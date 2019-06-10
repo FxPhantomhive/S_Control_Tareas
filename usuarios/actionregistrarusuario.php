@@ -4,6 +4,7 @@
     $apellido = $_POST['apellido'];
     $usuario = $_POST['usuario'];
     $clave = $_POST['clave'];
+    $cargo = $_POST['cargo'];
     $tipo = "normal";
     $usuarioregistra=$_POST['uregistra'];
     $fechar=date("Y-m-d H:i:s"); 
@@ -21,8 +22,8 @@
         $mensaje = "Ya existe un registro con este nombre de usuario";        
     } else {
         $mensaje = "los datos fueron insertados de manera satisfactoria";
-        $consu="insert into usuarios(nombre,apellido,usuario,pass,foto,tipo_usuario,usuario_registra,fecha_registra)
-                        VALUES ('$nombre','$apellido','$usuario','$clave','$nombre_temporal','$tipo','$usuarioregistra','$fechar');";
+        $consu="insert into usuarios(nombre,apellido,usuario,pass,id_cargo,foto,tipo_usuario,usuario_registra,fecha_registra)
+                        VALUES ('$nombre','$apellido','$usuario','$clave','$cargo','$nombre_temporal','$tipo','$usuarioregistra','$fechar');";
     $ejecutar=mysqli_query($conexion,$consu);
     } 
     

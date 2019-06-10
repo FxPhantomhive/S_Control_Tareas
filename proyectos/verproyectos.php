@@ -4,7 +4,7 @@
  p.fecha_registra,p.usuario_registra,p.usuario_actualiza,p.fecha_actualiza 
  from proyectos as p INNER JOIN usuarios as u on p.id_usuario = u.id_usuario 
  INNER JOIN departamento as d on d.id_departamento = p.id_departamento 
- INNER JOIN categorias as c on c.id_categoria = p.id_categoria order by p.id_proyecto DESC";
+ INNER JOIN categorias as c on c.id_categoria = p.id_categoria order by p.id_proyecto ASC";
  $datos=mysqli_query($conexion,$consulta);
     
 ?>
@@ -18,6 +18,17 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="../css/simple-line-icons.css" rel="stylesheet" type="text/css">
     <title>Proyectos</title>
+    <script language="JavaScript">
+        function aviso(url){
+            if (!confirm("ALERTA!! va a proceder a eliminar este registro, si desea eliminarlo de click en ACEPTAR\n de lo contrario de click en CANCELAR.")) {
+                return false;
+            }
+            else {
+                document.location = url;
+                return true;
+                }
+        }
+    </script>
 </head>
 <body>
     <section class="contenedor">
@@ -60,8 +71,8 @@
                         <td><?php echo $row['fecha_registra']; ?></td>     
                         <td><?php echo $row['usuario_actualiza']; ?></td> 
                         <td><?php echo $row['fecha_actualiza']; ?></td>                      
-                        <td class="center"><a href="modificardepartamento.php?id=<?php echo $row['id_departamento'];?>" style="text-decoration:none;"><i class="icon-pencil icon-color-modificar"></i></a></td>
-                        <td class="center"><a href="javascript:;" onclick="aviso('actioneliminardepartamento.php?id=<?php echo $row['id_departamento'];?>'); return false;" style="text-decoration:none;"><i class="icon-close icon-color-eliminar"></i></a></td>
+                        <td class="center"><a href="modificarproyecto.php?id=<?php echo $row['id_proyecto'];?>" style="text-decoration:none;"><i class="icon-pencil icon-color-modificar"></i></a></td>
+                        <td class="center"><a href="javascript:;" onclick="aviso('actioneliminarproyecto.php?id=<?php echo $row['id_proyecto'];?>'); return false;" style="text-decoration:none;"><i class="icon-close icon-color-eliminar"></i></a></td>
                     </tr>
                     <?php 
                         }

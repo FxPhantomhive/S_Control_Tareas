@@ -18,14 +18,18 @@
             <div class="targetaform">
             <h1 class="titular">Modificar Usuario</h1>
                 <?php
+                $cargo="SELECT * from cargo;";
+                $Ecargo=mysqli_query($conexion,$cargo);
                 if (isset($_GET['id'])) {
                     $id = $_GET['id'];
-                    $consulta="select * from usuarios where id_usuario='".$id."';";
+                    $consulta="SELECT u.id_usuario,u.nombre,u.apellido,u.usuario,u.pass,u.tipo_usuario,u.id_cargo,c.Nombre_cargo,u.foto,u.usuario_registra,u.fecha_registra,u.usuario_actualiza,u.fecha_actualiza from usuarios as u INNER JOIN cargo as c on u.id_cargo = c.id_cargo where u.id_usuario='".$id."' order by u.id_usuario asc;";
+
+                    //$consulta="select * from usuarios where id_usuario='".$id."';";
                 }else{
                 $usuario=$_SESSION['sesion'];
-                echo $usuario;
-
-                $consulta="select * from usuarios where usuario='".$usuario."';";
+                //echo $usuario;
+                    $consulta="SELECT u.id_usuario,u.nombre,u.apellido,u.usuario,u.pass,u.tipo_usuario,u.id_cargo,c.Nombre_cargo,u.foto,u.usuario_registra,u.fecha_registra,u.usuario_actualiza,u.fecha_actualiza from usuarios as u INNER JOIN cargo as c on u.id_cargo = c.id_cargo where u.usuario='".$usuario."' order by u.id_usuario asc;";
+                //$consulta="select * from usuarios where usuario='".$usuario."';";
                 }
                 $datos=mysqli_query($conexion,$consulta);
                   while($row=mysqli_fetch_array($datos)){ 
@@ -50,6 +54,19 @@
                     <tr>
                         <td><label>Contraseña:</label></td>
                         <td><input type="password" name="clave" id="clave" size="35" value="<?php echo $row['pass']; ?>"required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Cargo:</label></td>
+                        <td><select name="cargo" id="cargo" class="selectuser" required>
+                            <option value="<?php echo $row['id_cargo']; ?>"><?php echo $row['Nombre_cargo']; ?></option>
+                            <?php  
+                                                               
+                                while($row1=mysqli_fetch_array($Ecargo)){ ?>
+                                    <option value="<?php echo $row1['id_cargo']; ?>"><?php echo $row1['Nombre_cargo']; ?></option>
+                            <?php    
+                            }
+                            ?>                            
+                        </select></td>
                     </tr>
                     <tr>
                         <td><label>Foto:</label></td>
