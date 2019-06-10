@@ -28,15 +28,15 @@ $tipo=$_SESSION['tipo_user'];
         if( $tipo== "administrador"){
          ?>
          <div class="items "><i class="icon-home icon-color"></i><a href="#" class="aitem ">Inicio </a></div>
-        <div class="items"><i class="icon-note icon-color"></i><a href="registrarproyecto.php" class="aitem">Registrar proyectos</a></div>
-        <div class="items"><i class="icon-list icon-color"></i><a href="proyectos.php" class="aitem">Ver Proyectos</a></div>
-        <div class="items"><i class="icon-plus icon-color"></i><a href="#" class="aitem">Nueva Categoria</a></div>
-        <div class="items"><i class="icon-tag icon-color"></i><a href="#" class="aitem">Ver Categorias</a></div>
+        <div class="items"><i class="icon-note icon-color"></i><a href="../proyectos/registrarproyecto.php" class="aitem">Registrar proyectos</a></div>
+        <div class="items"><i class="icon-list icon-color"></i><a href="../proyectos/verproyectos.php" class="aitem">Ver Proyectos</a></div>
+        <div class="items"><i class="icon-plus icon-color"></i><a href="../categorias/registrarcategoria.php" class="aitem">Nueva Categoria</a></div>
+        <div class="items"><i class="icon-tag icon-color"></i><a href="../categorias/vercategorias.php" class="aitem">Ver Categorias</a></div>
 
-        <div class="items"><i class="icon-direction icon-color"></i><a href="verusuarios.php" class="aitem ">Nuevo departamento</a></div>
-        <div class="items"><i class="icon-plus icon-color"></i><a href="verusuarios.php" class="aitem ">Ver departamentos</a></div>
-        <div class="items"><i class="icon-badge icon-color"></i><a href="verusuarios.php" class="aitem ">Nuevo cargo</a></div>
-        <div class="items"><i class="icon-plus icon-color"></i><a href="verusuarios.php" class="aitem ">Ver cargos</a></div>
+        <div class="items"><i class="icon-direction icon-color"></i><a href="../departamentos/registrardepartamento.php" class="aitem ">Nuevo departamento</a></div>
+        <div class="items"><i class="icon-plus icon-color"></i><a href="../departamentos/verdepartamentos.php" class="aitem ">Ver departamentos</a></div>
+        <div class="items"><i class="icon-badge icon-color"></i><a href="../cargos/registrarcargo.php" class="aitem ">Nuevo cargo</a></div>
+        <div class="items"><i class="icon-plus icon-color"></i><a href="../cargos/vercargos.php" class="aitem ">Ver cargos</a></div>
 
         <div class="items"><i class="icon-pin icon-color"></i><a href="#" class="aitem">Registrar Tareas</a></div>
         <div class="items"><i class="icon-list icon-color"></i><a href="#" class="aitem">Ver Tareas</a></div>

@@ -15,12 +15,12 @@ CREATE TABLE usuarios(
 
 insert into usuarios (nombre,apellido,usuario,pass,tipo_usuario,usuario_registra,fecha_registra) values ('Felix','Melendez','FxPhantomhive','1234','administrador','bdsql','2019-05-30 17:15:20');
 insert into usuarios (nombre,apellido,usuario,pass,tipo_usuario,usuario_registra,fecha_registra) values ('Fernando','Gonzalez','Ferjocode','1234','normal','bdsql','2019-05-30 17:15:20');
-insert into usuarios (nombre,apellido,usuario,pass,tipo_usuario,usuario_registra,fecha_registra) values ('Yasmin','Alas','gato','1234','normal','bdsql','2019-05-30 17:15:20');
+
 
 CREATE TABLE categorias (
-    id_categoria int PRIMARY KEY,
+    id_categoria int AUTO_INCREMENT PRIMARY KEY,
     Nombre_categoria varchar(200),
-    descripicion varchar(200),
+    descripcion varchar(200),
     usuario_registra varchar(20),
     fecha_registra datetime,
     usuario_actualiza varchar(20),
@@ -28,9 +28,9 @@ CREATE TABLE categorias (
 )ENGINE=INNODB;
 
 CREATE TABLE departamento (
-    id_departamento int PRIMARY KEY,
+    id_departamento int AUTO_INCREMENT PRIMARY KEY,
     Nombre_departamento varchar(200),
-    descripicion varchar(200),
+    descripcion varchar(200),
     usuario_registra varchar(20),
     fecha_registra datetime,
     usuario_actualiza varchar(20),
@@ -38,9 +38,24 @@ CREATE TABLE departamento (
 )ENGINE=INNODB;
 
 CREATE TABLE cargo (
-    id_cargo int PRIMARY KEY,
+    id_cargo int AUTO_INCREMENT PRIMARY KEY,
     Nombre_cargo varchar(200),
-    descripicion varchar(200),
+    descripcion varchar(200),
+    usuario_registra varchar(20),
+    fecha_registra datetime,
+    usuario_actualiza varchar(20),
+    fecha_actualiza datetime
+)ENGINE=INNODB;
+
+CREATE TABLE proyectos (
+    id_proyecto int AUTO_INCREMENT PRIMARY KEY,
+    Nombre_proyecto varchar(200),
+    descripcion varchar(200),
+    fecha_inicio datetime,
+    fecha_fin datetime,
+    id_usuario int,
+    id_departamento int,
+    id_categoria int,
     usuario_registra varchar(20),
     fecha_registra datetime,
     usuario_actualiza varchar(20),

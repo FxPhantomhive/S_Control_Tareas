@@ -2,7 +2,7 @@
     include_once "../conexion/conexion.php";
     $id = $_GET['id'];
 
-    $consu="delete from usuarios where id_usuario='$id'";
+    $consu="delete from categorias where id_categoria='$id'";
     $ejecutar=mysqli_query($conexion,$consu);
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/sistemstyle.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="../css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <title>eliminar usuario</title>
+    <title>eliminar Categorias</title>
 </head>
 <body>
     <section class="contenedor">
@@ -23,7 +23,7 @@
         
             <div class="contprin">
             <div class="targetaform">
-                <h1 class="titular">Eliminar Usuario</h1>
+                <h1 class="titular">Eliminar Categorias</h1>
                 <?php
                     if(mysqli_connect_errno()){
                         echo "surgio un problema al eliminar datos en la base de datos <br>";
@@ -35,7 +35,7 @@
                     mysqli_close($conexion);
                 ?>
                 <div class="center">
-                    <a  class="regresar" href="../categorias/vercategorias.php">Volver</a>
+                    <a  class="regresar" href="../usuarios/verusuarios.php">Volver</a>
                 </div>
                 
             </div>

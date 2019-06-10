@@ -2,34 +2,11 @@
     include_once "../conexion/conexion.php";
     $id = $_POST['id'];
     $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $usuario = $_POST['usuario'];
-    $clave = $_POST['clave'];
-    $tipo = $_POST['tipo'];
+    $descripcion = $_POST['descripcion'];    
     $usuarioactualiza=$_POST['uactualiza'];
     $fechaa=date("Y-m-d H:i:s"); 
 
-
-    $revisar = $_FILES["image"]["name"];
-    if($revisar !== ""){
-         $carpeta="../img/";
-         $upload_temporal = $_FILES['image']['tmp_name'];
-         $nombre_temporal=$_FILES['image']['name'];
-         $nombre_ruta=$carpeta.$nombre_temporal;
-         if(is_uploaded_file($upload_temporal)){
-             move_uploaded_file($upload_temporal,$nombre_ruta);
-         }
-     }else{
-         $nombre_temporal=$_POST["file2"];
-     } 
-  /*   echo $id; pruebas de insersion
-     echo $nombre;
-     echo $apellido;
-     echo $usuario;
-     echo $clave;
-     echo $tipo;
-     echo $nombre_temporal; */
-    $consu="update usuarios set nombre='$nombre',apellido='$apellido',usuario='$usuario',pass='$clave',foto='$nombre_temporal',tipo_usuario='$tipo',usuario_actualiza='$usuarioactualiza',fecha_actualiza='$fechaa' where id_usuario='$id';";
+    $consu="update categorias set Nombre_categoria='$nombre',descripcion='$descripcion',usuario_actualiza='$usuarioactualiza',fecha_actualiza='$fechaa' where id_categoria='$id';";
     $ejecutar=mysqli_query($conexion,$consu);
 ?>
 <!DOCTYPE html>
@@ -41,7 +18,7 @@
     <link rel="stylesheet" href="../css/sistemstyle.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="../css/simple-line-icons.css" rel="stylesheet" type="text/css">
-    <title>modificar usuario</title>
+    <title>modificar Categoria</title>
 </head>
 <body>
     <section class="contenedor">
@@ -50,7 +27,7 @@
         
             <div class="contprin">
             <div class="targetaform">
-                <h1 class="titular">Modificar Usuario</h1>
+                <h1 class="titular">Modificar Categoria</h1>
                 <?php
                     if(mysqli_connect_errno()){
                         echo "surgio un problema al insertar datos en la base de datos <br>";
@@ -62,7 +39,7 @@
                     mysqli_close($conexion);
                 ?>
                 <div class="center">
-                    <a  class="regresar" href="../usuarios/verusuarios.php">Volver</a>
+                    <a  class="regresar" href="../categorias/vercategorias.php">Volver</a>
                 </div>
                 
             </div>
