@@ -45,8 +45,8 @@ $tipo=$_SESSION['tipo_user'];
         <div class="items"><i class="icon-check icon-color"></i><a href="../tareas/tareascomp.php" class="aitem">Tareas completadas</a></div>
         <div class="items"><i class="icon-user-follow icon-color"></i><a href="../usuarios/registrarusuario.php" class="aitem ">Registrar Usuarios</a></div>
         <div class="items"><i class="icon-user icon-color"></i><a href="../usuarios/verusuarios.php" class="aitem ">Ver usuarios</a></div>
-        <div class="items"><i class="icon-globe icon-color"></i><a href="#" class="aitem ">Definir nuevos administradores</a></div>
-        <div class="items"><i class="icon-eye icon-color"></i><a href="#" class="aitem ">Gestion de administradores</a></div>
+        <div class="items"><i class="icon-globe icon-color"></i><a href="../administradores/nombraradministrador.php" class="aitem ">Definir nuevos administradores</a></div>
+        <div class="items"><i class="icon-eye icon-color"></i><a href="../administradores/veradministradores.php" class="aitem ">Gestion de administradores</a></div>
         <?php
         }else if($tipo== "normal"){
         ?>
