@@ -27,7 +27,7 @@ $tipo=$_SESSION['tipo_user'];
         <?php 
         if( $tipo== "administrador"){
          ?>
-         <div class="items "><i class="icon-home icon-color"></i><a href="#" class="aitem ">Inicio </a></div>
+         <div class="items "><i class="icon-home icon-color"></i><a href="../conexion/inicio.php" class="aitem ">Inicio </a></div>
         <div class="items"><i class="icon-note icon-color"></i><a href="../proyectos/registrarproyecto.php" class="aitem">Registrar proyectos</a></div>
         <div class="items"><i class="icon-list icon-color"></i><a href="../proyectos/verproyectos.php" class="aitem">Ver Proyectos</a></div>
         <div class="items"><i class="icon-plus icon-color"></i><a href="../categorias/registrarcategoria.php" class="aitem">Nueva Categoria</a></div>
@@ -50,7 +50,7 @@ $tipo=$_SESSION['tipo_user'];
         <?php
         }else if($tipo== "normal"){
         ?>
-        <div class="items "><i class="icon-home icon-color"></i><a href="#" class="aitem ">Inicio </a></div>
+        <div class="items "><i class="icon-home icon-color"></i><a href="../conexion/inicio.php" class="aitem ">Inicio </a></div>
         
         <div class="items"><i class="icon-pin icon-color"></i><a href="../tareas/registrartarea.php" class="aitem">Registrar Tareas</a></div>
         <div class="items"><i class="icon-list icon-color"></i><a href="../tareas/vertareas.php" class="aitem">Ver Tareas</a></div>

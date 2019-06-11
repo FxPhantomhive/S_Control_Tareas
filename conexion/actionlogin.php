@@ -25,7 +25,7 @@ $_SESSION['foto']=$row['foto'];
         $mensaje = "Bienvenido: ".$row['usuario']."";
 echo "<script>";
 echo "alert('$mensaje');";  
-echo "window.location = '../tareas/vertareas.php';";
+echo "window.location = 'inicio.php';";
 echo "</script>"; 
 
     }else
